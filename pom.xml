@@ -17,7 +17,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.cloudera.sparkts</groupId>
   <artifactId>sparkts</artifactId>
-  <version>0.4.0-SNAPSHOT</version>
+  <version>0.5.0-SNAPSHOT</version>
   <packaging>jar</packaging>
   <name>Time Series for Spark</name>
   <description>A library for analyzing large-scale time series data.</description>
@@ -38,7 +38,7 @@
   </developers>
 
   <prerequisites>
-    <maven>3.1.1</maven>
+    <maven>3.6.0</maven>
   </prerequisites>
 
   <scm>
@@ -51,11 +51,11 @@
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-    <java.version>1.8</java.version>
-    <scala.minor.version>2.11</scala.minor.version>
-    <scala.complete.version>2.11.8</scala.complete.version>
-    <spark.version>2.0.0</spark.version>
-    <breeze.version>0.12</breeze.version>
+    <java.version>1.11</java.version>
+    <scala.minor.version>2.12</scala.minor.version>
+    <scala.complete.version>2.12.7</scala.complete.version>
+    <spark.version>2.4.0</spark.version>
+    <breeze.version>0.13.2</breeze.version>
   </properties>
 
   <distributionManagement>
@@ -127,7 +127,7 @@
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-compiler-plugin</artifactId>
-        <version>3.3</version>
+        <version>3.6.2</version>
         <configuration>
           <source>${java.version}</source>
           <target>${java.version}</target>
@@ -185,7 +185,7 @@
       <plugin>
         <groupId>org.scalatest</groupId>
         <artifactId>scalatest-maven-plugin</artifactId>
-        <version>1.0</version>
+        <version>2.0</version>
         <configuration>
           <reportsDirectory>${project.build.directory}/surefire-reports</reportsDirectory>
           <junitxml>.</junitxml>
@@ -374,7 +374,7 @@
     <dependency>
       <groupId>org.apache.hadoop</groupId>
       <artifactId>hadoop-yarn-client</artifactId>
-      <version>2.6.0</version>
+      <version>2.9.2</version>
       <scope>provided</scope>
     </dependency>
     <dependency>
@@ -421,12 +421,12 @@
     <dependency>
       <groupId>org.threeten</groupId>
       <artifactId>threeten-extra</artifactId>
-      <version>0.9</version>
+      <version>1.4</version>
     </dependency>
     <dependency>
       <groupId>org.scalatest</groupId>
       <artifactId>scalatest_${scala.minor.version}</artifactId>
-      <version>2.2.1</version>
+      <version>3.0.5</version>
       <scope>test</scope>
     </dependency>
     <dependency>
@@ -466,7 +466,7 @@
     <dependency>
       <groupId>org.apache.commons</groupId>
       <artifactId>commons-math3</artifactId>
-      <version>3.4.1</version>
+      <version>3.6.1</version>
     </dependency>
     <dependency>
       <groupId>junit</groupId>
@@ -475,15 +475,4 @@
       <scope>test</scope>
     </dependency>
   </dependencies>
-
-  <profiles>
-    <profile>
-      <id>scala-2.10</id>
-      <properties>
-        <scala.minor.version>2.10</scala.minor.version>
-        <scala.complete.version>2.10.6</scala.complete.version>
-      </properties>
-    </profile>
-  </profiles>
-
 </project>

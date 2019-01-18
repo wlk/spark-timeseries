@@ -18,9 +18,9 @@ package com.cloudera.sparkts
 import java.time.{ZonedDateTime, ZoneId}
 
 import com.cloudera.sparkts.DateTimeIndex._
-import org.scalatest.{FunSuite, ShouldMatchers}
+import org.scalatest.{FunSuite, Matchers}
 
-class DateTimeIndexUtilsSuite extends FunSuite with ShouldMatchers {
+class DateTimeIndexUtilsSuite extends FunSuite with Matchers {
   val UTC = ZoneId.of("Z")
 
   test("non-overlapping sorted") {
